@@ -12,6 +12,7 @@ Pod::Spec.new do |s|
                 }
     s.author             = { "Eitan Goldfrad" => "eitan.goldfrad@gmail.com" }
     s.source            = { :http => 'https://snappers-assets.s3.eu-central-1.amazonaws.com/SDK/SDK2.xcframework.zip' } 
+    s.vendored_frameworks = 'SDK2.xcframework'
 
     s.platform = :ios
     s.swift_version = "5.3.2"
