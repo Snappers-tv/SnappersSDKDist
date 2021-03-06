@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
     s.name         = "SnappersSDK"
-    s.version      = "1.0.2"
+    s.version      = "1.0.3"
     s.summary      = "Snappers native iOS SDK"
     s.description  = "Live stream on demand using the Snappers SDK"
     s.homepage     = "https://snappers.tv"
