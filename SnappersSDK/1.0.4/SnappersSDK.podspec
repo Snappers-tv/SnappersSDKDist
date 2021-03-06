@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
                   LICENSE
                 }
     s.author             = { "Eitan Goldfrad" => "eitan.goldfrad@gmail.com" }
-    s.source       = { :git => "https://github.com/Snappers-tv/SnappersSDKDist.git", :branch => "main" }
+    s.source            = { :http => 'https://snappers-assets.s3.eu-central-1.amazonaws.com/SDK/SDK2.xcframework.zip' } 
 
     s.platform = :ios
     s.swift_version = "5.3.2"
