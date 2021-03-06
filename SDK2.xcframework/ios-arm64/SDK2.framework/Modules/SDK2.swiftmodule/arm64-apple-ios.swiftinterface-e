@@ -1,0 +1,371 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SDK2
+import AVFoundation
+import AVKit
+import AWSCore
+import AWSMobileClient
+import AWSS3
+import CallKit
+import CoreLocation
+import CoreMotion
+import EVReflection
+import FBSDKCoreKit
+import FBSDKLoginKit
+import Firebase
+import FirebaseAuth
+import FirebaseCore
+import FirebaseDatabase
+import FirebaseDynamicLinks
+import FirebaseFirestore
+import FirebaseInstanceID
+import FirebaseMessaging
+import FirebaseStorage
+import Foundation
+import GeoFire
+import GoogleMaps
+import GoogleMapsUtils
+import HaishinKit
+import ImageIO
+import JWTDecode
+import Kingfisher
+import MapKit
+import MobileCoreServices
+import NotificationBannerSwift
+import ObjectiveC
+import OktaOidc
+import Photos
+import PhotosUI
+@_exported import SDK2
+import Sentry
+import SimplePing
+import Swift
+import SwiftKeychainWrapper
+import SwipeCellKit
+import TwitterKit
+import UIImageView_Letters
+import UIKit
+import UserNotifications
+import VideoToolbox
+@_inheritsConvenienceInitializers @objc open class Repository : EVReflection.EVObject {
+  @objc public static var shared: SDK2.Repository {
+    @objc get
+  }
+  @objc public func versionSigniture() -> Swift.String
+  @objc deinit
+  @objc required dynamic public init()
+}
+extension CLLocationCoordinate2D : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SnappersConfiguration {
+  public init(affiliateCode: Swift.String? = nil, firebaseConfigFileName: Swift.String, reactToNotificationsWhenClosed: Swift.Bool = true, passSnappersNotificationsToHost: Swift.Bool = false, requestLocationImidiatly: Swift.Bool = false, allowSnappersdismissal: Swift.Bool = true)
+}
+public protocol SnappersDelegate : ObjectiveC.NSObjectProtocol {
+  func snappersDidConfigure()
+  func snappersShouldPresent(reply: @escaping (Swift.Bool) -> Swift.Void)
+  func snappersWillDissmiss()
+  func snappersDidDissmiss()
+  func handleSnappersAnalytics(event: Swift.String, data: [Swift.String : Any]?, level: SDK2.AnalyticsEventLevel)
+}
+extension SnappersDelegate {
+  public func snappersDidConfigure()
+  public func snappersShouldPresent(reply: ((Swift.Bool) -> Swift.Void))
+  public func snappersWillDissmiss()
+  public func snappersDidDissmiss()
+  public func handleSnappersAnalytics(event: Swift.String, data: [Swift.String : Any]?, level: SDK2.AnalyticsEventLevel)
+}
+public typealias SnapperConfigureCallback = (SDK2.SnappersError?) -> Swift.Void
+@objc @_inheritsConvenienceInitializers public class SnappersSDK : ObjectiveC.NSObject {
+  weak public static var delegate: SDK2.SnappersDelegate?
+  public static var isPresented: Swift.Bool {
+    get
+  }
+  public static func configure(configuration: SDK2.SnappersConfiguration, application: UIKit.UIApplication, launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?, _ callback: SDK2.SnapperConfigureCallback? = nil)
+  public static func present(from viewController: UIKit.UIViewController? = nil, animated: Swift.Bool = true, _ callback: SDK2.SnapperConfigureCallback? = nil)
+  public static func dismiss(animated: Swift.Bool = true) throws
+  public static func signout() throws
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension SnappersSDK {
+  public static func handle(url: Foundation.URL) -> Swift.Bool
+  public static func open(app: UIKit.UIApplication, url: Foundation.URL, options: [UIKit.UIApplication.OpenURLOptionsKey : Any]) -> Swift.Bool
+}
+@_inheritsConvenienceInitializers @objc open class Link : ObjectiveC.NSObject {
+  @objc public init?(params: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc public init?(url: Foundation.URL)
+  @objc deinit
+}
+extension Logger {
+  public enum Emoji : Swift.String {
+    case grinningFace, grinningFaceWithBigEyes, grinningFaceWithSmilingEyes, beamingFaceWithSmilingEyes, grinningSquintingFace, grinningFaceWithSweat, rollingOnTheFloorLaughing, faceWithTearsOfJoy, slightlySmilingFace, upsideDownFace, winkingFace, smilingFaceWithSmilingEyes, smilingFaceWithHalo, smilingFaceWithHearts, smilingFaceWithHeartEyes, starStruck, faceBlowingAKiss, kissingFace, smilingFace, kissingFaceWithClosedEyes, kissingFaceWithSmilingEyes, smilingFaceWithTear, faceSavoringFood, faceWithTongue, winkingFaceWithTongue, zanyFace, squintingFaceWithTongue, moneyMouthFace, huggingFace, faceWithHandOverMouth, shushingFace, thinkingFace, zipperMouthFace, faceWithRaisedEyebrow, neutralFace, expressionlessFace, faceWithoutMouth, smirkingFace, unamusedFace, faceWithRollingEyes, grimacingFace, lyingFace, relievedFace, pensiveFace, sleepyFace, droolingFace, sleepingFace, faceWithMedicalMask, faceWithThermometer, faceWithHeadBandage, nauseatedFace, faceVomiting, sneezingFace, hotFace, coldFace, woozyFace, dizzyFace, explodingHead, cowboyHatFace, partyingFace, disguisedFace, smilingFaceWithSunglasses, nerdFace, faceWithMonocle, confusedFace, worriedFace, slightlyFrowningFace, frowningFace, faceWithOpenMouth, hushedFace, astonishedFace, flushedFace, pleadingFace, frowningFaceWithOpenMouth, anguishedFace, fearfulFace, anxiousFaceWithSweat, sadButRelievedFace, cryingFace, loudlyCryingFace, faceScreamingInFear, confoundedFace, perseveringFace, disappointedFace, downcastFaceWithSweat, wearyFace, tiredFace, yawningFace, faceWithSteamFromNose, poutingFace, angryFace, faceWithSymbolsOnMouth, smilingFaceWithHorns, angryFaceWithHorns, skull, skullAndCrossbones, pileOfPoo, clownFace, ogre, goblin, ghost, alien, alienMonster, robot, grinningCat, grinningCatWithSmilingEyes, catWithTearsOfJoy, smilingCatWithHeartEyes, catWithWrySmile, kissingCat, wearyCat, cryingCat, poutingCat, seeNoEvilMonkey, hearNoEvilMonkey, speakNoEvilMonkey, kissMark, loveLetter, heartWithArrow, heartWithRibbon, sparklingHeart, growingHeart, beatingHeart, revolvingHearts, twoHearts, heartDecoration, heartExclamation, brokenHeart, redHeart, orangeHeart, yellowHeart, greenHeart, blueHeart, purpleHeart, brownHeart, blackHeart, whiteHeart, hundredPoints, angerSymbol, collision, dizzy, sweatDroplets, dashingAway, hole, bomb, speechBalloon, eyeInSpeechBubble, leftSpeechBubble, rightAngerBubble, thoughtBalloon, zzz, wavingHand, raisedBackOfHand, handWithFingersSplayed, raisedHand, vulcanSalute, okHand, pinchedFingers, pinchingHand, victoryHand, crossedFingers, loveYouGesture, signOfTheHorns, callMeHand, backhandIndexPointingLeft, backhandIndexPointingRight, backhandIndexPointingUp, middleFinger, backhandIndexPointingDown, indexPointingUp, thumbsUp, thumbsDown, raisedFist, oncomingFist, leftFacingFist, rightFacingFist, clappingHands, raisingHands, openHands, palmsUpTogether, handshake, foldedHands, writingHand, nailPolish, selfie, flexedBiceps, mechanicalArm, mechanicalLeg, leg, foot, ear, earWithHearingAid, nose, brain, anatomicalHeart, lungs, tooth, bone, eyes, eye, tongue, mouth, baby, child, boy, girl, person, personBlondHair, man, manBeard, manRedHair, manCurlyHair, manWhiteHair, manBald, woman, womanRedHair, personRedHair, womanCurlyHair, personCurlyHair, womanWhiteHair, personWhiteHair, womanBald, personBald, womanBlondHair, manBlondHair, olderPerson, oldMan, oldWoman, personFrowning, manFrowning, womanFrowning, personPouting, manPouting, womanPouting, personGesturingNo, manGesturingNo, womanGesturingNo, personGesturingOk, manGesturingOk, womanGesturingOk, personTippingHand, manTippingHand, womanTippingHand, personRaisingHand, manRaisingHand, womanRaisingHand, deafPerson, deafMan, deafWoman, personBowing, manBowing, womanBowing, personFacepalming, manFacepalming, womanFacepalming, personShrugging, manShrugging, womanShrugging, healthWorker, manHealthWorker, womanHealthWorker, student, manStudent, womanStudent, teacher, manTeacher, womanTeacher, judge, manJudge, womanJudge, farmer, manFarmer, womanFarmer, cook, manCook, womanCook, mechanic, manMechanic, womanMechanic, factoryWorker, manFactoryWorker, womanFactoryWorker, officeWorker, manOfficeWorker, womanOfficeWorker, scientist, manScientist, womanScientist, technologist, manTechnologist, womanTechnologist, singer, manSinger, womanSinger, artist, manArtist, womanArtist, pilot, manPilot, womanPilot, astronaut, manAstronaut, womanAstronaut, firefighter, manFirefighter, womanFirefighter, policeOfficer, manPoliceOfficer, womanPoliceOfficer, detective, manDetective, womanDetective, `guard`, manGuard, womanGuard, ninja, constructionWorker, manConstructionWorker, womanConstructionWorker, prince, princess, personWearingTurban, manWearingTurban, womanWearingTurban, personWithSkullcap, womanWithHeadscarf, personInTuxedo, manInTuxedo, womanInTuxedo, personWithVeil, manWithVeil, womanWithVeil, pregnantWoman, breastFeeding, womanFeedingBaby, manFeedingBaby, personFeedingBaby, babyAngel, santaClaus, mrsClaus, mxClaus, superhero, manSuperhero, womanSuperhero, supervillain, manSupervillain, womanSupervillain, mage, manMage, womanMage, fairy, manFairy, womanFairy, vampire, manVampire, womanVampire, merperson, merman, mermaid, elf, manElf, womanElf, genie, manGenie, womanGenie, zombie, manZombie, womanZombie, personGettingMassage, manGettingMassage, womanGettingMassage, personGettingHaircut, manGettingHaircut, womanGettingHaircut, personWalking, manWalking, womanWalking, personStanding, manStanding, womanStanding, personKneeling, manKneeling, womanKneeling, personWithWhiteCane, manWithWhiteCane, womanWithWhiteCane, personInMotorizedWheelchair, manInMotorizedWheelchair, womanInMotorizedWheelchair, personInManualWheelchair, manInManualWheelchair, womanInManualWheelchair, personRunning, manRunning, womanRunning, womanDancing, manDancing, personInSuitLevitating, peopleWithBunnyEars, menWithBunnyEars, womenWithBunnyEars, personInSteamyRoom, manInSteamyRoom, womanInSteamyRoom, personClimbing, manClimbing, womanClimbing, personFencing, horseRacing, skier, snowboarder, personGolfing, manGolfing, womanGolfing, personSurfing, manSurfing, womanSurfing, personRowingBoat, manRowingBoat, womanRowingBoat, personSwimming, manSwimming, womanSwimming, personBouncingBall, manBouncingBall, womanBouncingBall, personLiftingWeights, manLiftingWeights, womanLiftingWeights, personBiking, manBiking, womanBiking, personMountainBiking, manMountainBiking, womanMountainBiking, personCartwheeling, manCartwheeling, womanCartwheeling, peopleWrestling, menWrestling, womenWrestling, personPlayingWaterPolo, manPlayingWaterPolo, womanPlayingWaterPolo, personPlayingHandball, manPlayingHandball, womanPlayingHandball, personJuggling, manJuggling, womanJuggling, personInLotusPosition, manInLotusPosition, womanInLotusPosition, personTakingBath, personInBed, peopleHoldingHands, womenHoldingHands, womanAndManHoldingHands, menHoldingHands, kiss, kissWomanMan, kissManMan, kissWomanWoman, coupleWithHeart, coupleWithHeartWomanMan, coupleWithHeartManMan, coupleWithHeartWomanWoman, family, familyManWomanBoy, familyManWomanGirl, familyManWomanGirlBoy, familyManWomanBoyBoy, familyManWomanGirlGirl, familyManManBoy, familyManManGirl, familyManManGirlBoy, familyManManBoyBoy, familyManManGirlGirl, familyWomanWomanBoy, familyWomanWomanGirl, familyWomanWomanGirlBoy, familyWomanWomanBoyBoy, familyWomanWomanGirlGirl, familyManBoy, familyManBoyBoy, familyManGirl, familyManGirlBoy, familyManGirlGirl, familyWomanBoy, familyWomanBoyBoy, familyWomanGirl, familyWomanGirlBoy, familyWomanGirlGirl, speakingHead, bustInSilhouette, bustsInSilhouette, peopleHugging, footprints, monkeyFace, monkey, gorilla, orangutan, dogFace, dog, guideDog, serviceDog, poodle, wolf, fox, raccoon, catFace, cat, blackCat, lion, tigerFace, tiger, leopard, horseFace, horse, unicorn, zebra, deer, bison, cowFace, ox, waterBuffalo, cow, pigFace, pig, boar, pigNose, ram, ewe, goat, camel, twoHumpCamel, llama, giraffe, elephant, mammoth, rhinoceros, hippopotamus, mouseFace, mouse, rat, hamster, rabbitFace, rabbit, chipmunk, beaver, hedgehog, bat, bear, polarBear, koala, panda, sloth, otter, skunk, kangaroo, badger, pawPrints, turkey, chicken, rooster, hatchingChick, babyChick, frontFacingBabyChick, bird, penguin, dove, eagle, duck, swan, owl, dodo, feather, flamingo, peacock, parrot, frog, crocodile, turtle, lizard, snake, dragonFace, dragon, sauropod, tRex, spoutingWhale, whale, dolphin, seal, fish, tropicalFish, blowfish, shark, octopus, spiralShell, snail, butterfly, bug, ant, honeybee, beetle, ladyBeetle, cricket, cockroach, spider, spiderWeb, scorpion, mosquito, fly, worm, microbe, bouquet, cherryBlossom, whiteFlower, rosette, rose, wiltedFlower, hibiscus, sunflower, blossom, tulip, seedling, pottedPlant, evergreenTree, deciduousTree, palmTree, cactus, sheafOfRice, herb, shamrock, fourLeafClover, mapleLeaf, fallenLeaf, leafFlutteringInWind, grapes, melon, watermelon, tangerine, lemon, banana, pineapple, mango, redApple, greenApple, pear, peach, cherries, strawberry, blueberries, kiwiFruit, tomato, olive, coconut, avocado, eggplant, potato, carrot, earOfCorn, hotPepper, bellPepper, cucumber, leafyGreen, broccoli, garlic, onion, mushroom, peanuts, chestnut, bread, croissant, baguetteBread, flatbread, pretzel, bagel, pancakes, waffle, cheeseWedge, meatOnBone, poultryLeg, cutOfMeat, bacon, hamburger, frenchFries, pizza, hotDog, sandwich, taco, burrito, tamale, stuffedFlatbread, falafel, egg, cooking, shallowPanOfFood, potOfFood, fondue, bowlWithSpoon, greenSalad, popcorn, butter, salt, cannedFood, bentoBox, riceCracker, riceBall, cookedRice, curryRice, steamingBowl, spaghetti, roastedSweetPotato, oden, sushi, friedShrimp, fishCakeWithSwirl, moonCake, dango, dumpling, fortuneCookie, takeoutBox, crab, lobster, shrimp, squid, oyster, softIceCream, shavedIce, iceCream, doughnut, cookie, birthdayCake, shortcake, cupcake, pie, chocolateBar, candy, lollipop, custard, honeyPot, babyBottle, glassOfMilk, hotBeverage, teapot, teacupWithoutHandle, sake, bottleWithPoppingCork, wineGlass, cocktailGlass, tropicalDrink, beerMug, clinkingBeerMugs, clinkingGlasses, tumblerGlass, cupWithStraw, bubbleTea, beverageBox, mate, ice, chopsticks, forkAndKnifeWithPlate, forkAndKnife, spoon, kitchenKnife, amphora, globeShowingEuropeAfrica, globeShowingAmericas, globeShowingAsiaAustralia, globeWithMeridians, worldMap, mapOfJapan, compass, snowCappedMountain, mountain, volcano, mountFuji, camping, beachWithUmbrella, desert, desertIsland, nationalPark, stadium, classicalBuilding, buildingConstruction, brick, rock, wood, hut, houses, derelictHouse, house, houseWithGarden, officeBuilding, japanesePostOffice, postOffice, hospital, bank, hotel, loveHotel, convenienceStore, school, departmentStore, factory, japaneseCastle, castle, wedding, tokyoTower, statueOfLiberty, church, mosque, hinduTemple, synagogue, shintoShrine, kaaba, fountain, tent, foggy, nightWithStars, cityscape, sunriseOverMountains, sunrise, cityscapeAtDusk, sunset, bridgeAtNight, hotSprings, carouselHorse, ferrisWheel, rollerCoaster, barberPole, circusTent, locomotive, railwayCar, highSpeedTrain, bulletTrain, train, metro, lightRail, station, tram, monorail, mountainRailway, tramCar, bus, oncomingBus, trolleybus, minibus, ambulance, fireEngine, policeCar, oncomingPoliceCar, taxi, oncomingTaxi, automobile, oncomingAutomobile, sportUtilityVehicle, pickupTruck, deliveryTruck, articulatedLorry, tractor, racingCar, motorcycle, motorScooter, manualWheelchair, motorizedWheelchair, autoRickshaw, bicycle, kickScooter, skateboard, rollerSkate, busStop, motorway, railwayTrack, oilDrum, fuelPump, policeCarLight, horizontalTrafficLight, verticalTrafficLight, stopSign, construction, anchor, sailboat, canoe, speedboat, passengerShip, ferry, motorBoat, ship, airplane, smallAirplane, airplaneDeparture, airplaneArrival, parachute, seat, helicopter, suspensionRailway, mountainCableway, aerialTramway, satellite, rocket, flyingSaucer, bellhopBell, luggage, hourglassDone, hourglassNotDone, watch, alarmClock, stopwatch, timerClock, mantelpieceClock, twelveOClock, twelveThirty, oneOClock, oneThirty, twoOClock, twoThirty, threeOClock, threeThirty, fourOClock, fourThirty, fiveOClock, fiveThirty, sixOClock, sixThirty, sevenOClock, sevenThirty, eightOClock, eightThirty, nineOClock, nineThirty, tenOClock, tenThirty, elevenOClock, elevenThirty, newMoon, waxingCrescentMoon, firstQuarterMoon, waxingGibbousMoon, fullMoon, waningGibbousMoon, lastQuarterMoon, waningCrescentMoon, crescentMoon, newMoonFace, firstQuarterMoonFace, lastQuarterMoonFace, thermometer, sun, fullMoonFace, sunWithFace, ringedPlanet, star, glowingStar, shootingStar, milkyWay, cloud, sunBehindCloud, cloudWithLightningAndRain, sunBehindSmallCloud, sunBehindLargeCloud, sunBehindRainCloud, cloudWithRain, cloudWithSnow, cloudWithLightning, tornado, fog, windFace, cyclone, rainbow, closedUmbrella, umbrella, umbrellaWithRainDrops, umbrellaOnGround, highVoltage, snowflake, snowman, snowmanWithoutSnow, comet, fire, droplet, waterWave, jackOLantern, christmasTree, fireworks, sparkler, firecracker, sparkles, balloon, partyPopper, confettiBall, tanabataTree, pineDecoration, japaneseDolls, carpStreamer, windChime, moonViewingCeremony, redEnvelope, ribbon, wrappedGift, reminderRibbon, admissionTickets, ticket, militaryMedal, trophy, sportsMedal, firstPlaceMedal, secondPlaceMedal, thirdPlaceMedal, soccerBall, baseball, softball, basketball, volleyball, americanFootball, rugbyFootball, tennis, flyingDisc, bowling, cricketGame, fieldHockey, iceHockey, lacrosse, pingPong, badminton, boxingGlove, martialArtsUniform, goalNet, flagInHole, iceSkate, fishingPole, divingMask, runningShirt, skis, sled, curlingStone, directHit, yoYo, kite, pool8Ball, crystalBall, magicWand, nazarAmulet, videoGame, joystick, slotMachine, gameDie, puzzlePiece, teddyBear, piñata, nestingDolls, spadeSuit, heartSuit, diamondSuit, clubSuit, chessPawn, joker, mahjongRedDragon, flowerPlayingCards, performingArts, framedPicture, artistPalette, thread, sewingNeedle, yarn, knot, glasses, sunglasses, goggles, labCoat, safetyVest, necktie, tShirt, jeans, scarf, gloves, coat, socks, dress, kimono, sari, onePieceSwimsuit, briefs, shorts, bikini, womanSClothes, purse, handbag, clutchBag, shoppingBags, backpack, thongSandal, manSShoe, runningShoe, hikingBoot, flatShoe, highHeeledShoe, womanSSandal, balletShoes, womanSBoot, crown, womanSHat, topHat, graduationCap, billedCap, militaryHelmet, rescueWorkerSHelmet, prayerBeads, lipstick, ring, gemStone, mutedSpeaker, speakerLowVolume, speakerMediumVolume, speakerHighVolume, loudspeaker, megaphone, postalHorn, bell, bellWithSlash, musicalScore, musicalNote, musicalNotes, studioMicrophone, levelSlider, controlKnobs, microphone, headphone, radio, saxophone, accordion, guitar, musicalKeyboard, trumpet, violin, banjo, drum, longDrum, mobilePhone, mobilePhoneWithArrow, telephone, telephoneReceiver, pager, faxMachine, battery, electricPlug, laptop, desktopComputer, printer, keyboard, computerMouse, trackball, computerDisk, floppyDisk, opticalDisk, dvd, abacus, movieCamera, filmFrames, filmProjector, clapperBoard, television, camera, cameraWithFlash, videoCamera, videocassette, magnifyingGlassTiltedLeft, magnifyingGlassTiltedRight, candle, lightBulb, flashlight, redPaperLantern, diyaLamp, notebookWithDecorativeCover, closedBook, openBook, greenBook, blueBook, orangeBook, books, notebook, ledger, pageWithCurl, scroll, pageFacingUp, newspaper, rolledUpNewspaper, bookmarkTabs, bookmark, label, moneyBag, coin, yenBanknote, dollarBanknote, euroBanknote, poundBanknote, moneyWithWings, creditCard, receipt, chartIncreasingWithYen, envelope, eMail, incomingEnvelope, envelopeWithArrow, outboxTray, inboxTray, package, closedMailboxWithRaisedFlag, closedMailboxWithLoweredFlag, openMailboxWithRaisedFlag, openMailboxWithLoweredFlag, postbox, ballotBoxWithBallot, pencil, blackNib, fountainPen, pen, paintbrush, crayon, memo, briefcase, fileFolder, openFileFolder, cardIndexDividers, calendar, tearOffCalendar, spiralNotepad, spiralCalendar, cardIndex, chartIncreasing, chartDecreasing, barChart, clipboard, pushpin, roundPushpin, paperclip, linkedPaperclips, straightRuler, triangularRuler, scissors, cardFileBox, fileCabinet, wastebasket, locked, unlocked, lockedWithPen, lockedWithKey, key, oldKey, hammer, axe, pick, hammerAndPick, hammerAndWrench, dagger, crossedSwords, pistol, boomerang, bowAndArrow, shield, carpentrySaw, wrench, screwdriver, nutAndBolt, gear, clamp, balanceScale, whiteCane, link, chains, hook, toolbox, magnet, ladder, alembic, testTube, petriDish, dna, microscope, telescope, satelliteAntenna, syringe, dropOfBlood, pill, adhesiveBandage, stethoscope, door, elevator, mirror, window, bed, couchAndLamp, chair, toilet, plunger, shower, bathtub, mouseTrap, razor, lotionBottle, safetyPin, broom, basket, rollOfPaper, bucket, soap, toothbrush, sponge, fireExtinguisher, shoppingCart, cigarette, coffin, headstone, funeralUrn, moai, placard, atmSign, litterInBinSign, potableWater, wheelchairSymbol, menSRoom, womenSRoom, restroom, babySymbol, waterCloset, passportControl, customs, baggageClaim, leftLuggage, warning, childrenCrossing, noEntry, prohibited, noBicycles, noSmoking, noLittering, nonPotableWater, noPedestrians, noMobilePhones, noOneUnderEighteen, radioactive, biohazard, upArrow, upRightArrow, rightArrow, downRightArrow, downArrow, downLeftArrow, leftArrow, upLeftArrow, upDownArrow, leftRightArrow, rightArrowCurvingLeft, leftArrowCurvingRight, rightArrowCurvingUp, rightArrowCurvingDown, clockwiseVerticalArrows, counterclockwiseArrowsButton, backArrow, endArrow, onArrow, soonArrow, topArrow, placeOfWorship, atomSymbol, om, starOfDavid, wheelOfDharma, yinYang, latinCross, orthodoxCross, starAndCrescent, peaceSymbol, menorah, dottedSixPointedStar, aries, taurus, gemini, cancer, leo, virgo, libra, scorpio, sagittarius, capricorn, aquarius, pisces, ophiuchus, shuffleTracksButton, repeatButton, repeatSingleButton, playButton, fastForwardButton, nextTrackButton, playOrPauseButton, reverseButton, fastReverseButton, lastTrackButton, upwardsButton, fastUpButton, downwardsButton, fastDownButton, pauseButton, stopButton, recordButton, ejectButton, cinema, dimButton, brightButton, antennaBars, vibrationMode, mobilePhoneOff, femaleSign, maleSign, transgenderSymbol, multiply, plus, minus, divide, infinity, doubleExclamationMark, exclamationQuestionMark, questionMark, whiteQuestionMark, whiteExclamationMark, exclamationMark, wavyDash, currencyExchange, heavyDollarSign, medicalSymbol, recyclingSymbol, fleurDeLis, tridentEmblem, nameBadge, japaneseSymbolForBeginner, hollowRedCircle, checkMarkButton, checkBoxWithCheck, checkMark, crossMark, crossMarkButton, curlyLoop, doubleCurlyLoop, partAlternationMark, eightSpokedAsterisk, eightPointedStar, sparkle, copyright, registered, tradeMark, keycapNumberSign, keycapAsterisk, keycap0, keycap1, keycap2, keycap3, keycap4, keycap5, keycap6, keycap7, keycap8, keycap9, keycap10, inputLatinUppercase, inputLatinLowercase, inputNumbers, inputSymbols, inputLatinLetters, aButtonBloodType, abButtonBloodType, bButtonBloodType, clButton, coolButton, freeButton, information, idButton, circledM, newButton, ngButton, oButtonBloodType, okButton, pButton, sosButton, upButton, vsButton, japaneseHereButton, japaneseServiceChargeButton, japaneseMonthlyAmountButton, japaneseNotFreeOfChargeButton, japaneseReservedButton, japaneseBargainButton, japaneseDiscountButton, japaneseFreeOfChargeButton, japaneseProhibitedButton, japaneseAcceptableButton, japaneseApplicationButton, japanesePassingGradeButton, japaneseVacancyButton, japaneseCongratulationsButton, japaneseSecretButton, japaneseOpenForBusinessButton, japaneseNoVacancyButton, redCircle, orangeCircle, yellowCircle, greenCircle, blueCircle, purpleCircle, brownCircle, blackCircle, whiteCircle, redSquare, orangeSquare, yellowSquare, greenSquare, blueSquare, purpleSquare, brownSquare, blackLargeSquare, whiteLargeSquare, blackMediumSquare, whiteMediumSquare, blackMediumSmallSquare, whiteMediumSmallSquare, blackSmallSquare, whiteSmallSquare, largeOrangeDiamond, largeBlueDiamond, smallOrangeDiamond, smallBlueDiamond, redTrianglePointedUp, redTrianglePointedDown, diamondWithADot, radioButton, whiteSquareButton, blackSquareButton, chequeredFlag, triangularFlag, crossedFlags, blackFlag, whiteFlag, rainbowFlag, transgenderFlag, pirateFlag, flagAscensionIsland, flagAndorra, flagUnitedArabEmirates, flagAfghanistan, flagAntiguaBarbuda, flagAnguilla, flagAlbania, flagArmenia, flagAngola, flagAntarctica, flagArgentina, flagAmericanSamoa, flagAustria, flagAustralia, flagAruba, flagÅlandIslands, flagAzerbaijan, flagBosniaHerzegovina, flagBarbados, flagBangladesh, flagBelgium, flagBurkinaFaso, flagBulgaria, flagBahrain, flagBurundi, flagBenin, flagStBarthélemy, flagBermuda, flagBrunei, flagBolivia, flagCaribbeanNetherlands, flagBrazil, flagBahamas, flagBhutan, flagBouvetIsland, flagBotswana, flagBelarus, flagBelize, flagCanada, flagCocosKeelingIslands, flagCongoKinshasa, flagCentralAfricanRepublic, flagCongoBrazzaville, flagSwitzerland, flagCôteDIvoire, flagCookIslands, flagChile, flagCameroon, flagChina, flagColombia, flagClippertonIsland, flagCostaRica, flagCuba, flagCapeVerde, flagCuraçao, flagChristmasIsland, flagCyprus, flagCzechia, flagGermany, flagDiegoGarcia, flagDjibouti, flagDenmark, flagDominica, flagDominicanRepublic, flagAlgeria, flagCeutaMelilla, flagEcuador, flagEstonia, flagEgypt, flagWesternSahara, flagEritrea, flagSpain, flagEthiopia, flagEuropeanUnion, flagFinland, flagFiji, flagFalklandIslands, flagMicronesia, flagFaroeIslands, flagFrance, flagGabon, flagUnitedKingdom, flagGrenada, flagGeorgia, flagFrenchGuiana, flagGuernsey, flagGhana, flagGibraltar, flagGreenland, flagGambia, flagGuinea, flagGuadeloupe, flagEquatorialGuinea, flagGreece, flagSouthGeorgiaSouthSandwichIslands, flagGuatemala, flagGuam, flagGuineaBissau, flagGuyana, flagHongKongSarChina, flagHeardMcdonaldIslands, flagHonduras, flagCroatia, flagHaiti, flagHungary, flagCanaryIslands, flagIndonesia, flagIreland, flagIsrael, flagIsleOfMan, flagIndia, flagBritishIndianOceanTerritory, flagIraq, flagIran, flagIceland, flagItaly, flagJersey, flagJamaica, flagJordan, flagJapan, flagKenya, flagKyrgyzstan, flagCambodia, flagKiribati, flagComoros, flagStKittsNevis, flagNorthKorea, flagSouthKorea, flagKuwait, flagCaymanIslands, flagKazakhstan, flagLaos, flagLebanon, flagStLucia, flagLiechtenstein, flagSriLanka, flagLiberia, flagLesotho, flagLithuania, flagLuxembourg, flagLatvia, flagLibya, flagMorocco, flagMonaco, flagMoldova, flagMontenegro, flagStMartin, flagMadagascar, flagMarshallIslands, flagNorthMacedonia, flagMali, flagMyanmarBurma, flagMongolia, flagMacaoSarChina, flagNorthernMarianaIslands, flagMartinique, flagMauritania, flagMontserrat, flagMalta, flagMauritius, flagMaldives, flagMalawi, flagMexico, flagMalaysia, flagMozambique, flagNamibia, flagNewCaledonia, flagNiger, flagNorfolkIsland, flagNigeria, flagNicaragua, flagNetherlands, flagNorway, flagNepal, flagNauru, flagNiue, flagNewZealand, flagOman, flagPanama, flagPeru, flagFrenchPolynesia, flagPapuaNewGuinea, flagPhilippines, flagPakistan, flagPoland, flagStPierreMiquelon, flagPitcairnIslands, flagPuertoRico, flagPalestinianTerritories, flagPortugal, flagPalau, flagParaguay, flagQatar, flagRéunion, flagRomania, flagSerbia, flagRussia, flagRwanda, flagSaudiArabia, flagSolomonIslands, flagSeychelles, flagSudan, flagSweden, flagSingapore, flagStHelena, flagSlovenia, flagSvalbardJanMayen, flagSlovakia, flagSierraLeone, flagSanMarino, flagSenegal, flagSomalia, flagSuriname, flagSouthSudan, flagSãoToméPríncipe, flagElSalvador, flagSintMaarten, flagSyria, flagEswatini, flagTristanDaCunha, flagTurksCaicosIslands, flagChad, flagFrenchSouthernTerritories, flagTogo, flagThailand, flagTajikistan, flagTokelau, flagTimorLeste, flagTurkmenistan, flagTunisia, flagTonga, flagTurkey, flagTrinidadTobago, flagTuvalu, flagTaiwan, flagTanzania, flagUkraine, flagUganda, flagUSOutlyingIslands, flagUnitedNations, flagUnitedStates, flagUruguay, flagUzbekistan, flagVaticanCity, flagStVincentGrenadines, flagVenezuela, flagBritishVirginIslands, flagUSVirginIslands, flagVietnam, flagVanuatu, flagWallisFutuna, flagSamoa, flagKosovo, flagYemen, flagMayotte, flagSouthAfrica, flagZambia, flagZimbabwe, flagEngland, flagScotland, flagWales
+    public typealias RawValue = Swift.String
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+public enum LoggerLevelThreshold : Swift.Int {
+  case info, warning, error, off
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum LoggerLevel : Swift.Int, Swift.CaseIterable {
+  case info, warning, error
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+  public typealias AllCases = [SDK2.LoggerLevel]
+  public static var allCases: [SDK2.LoggerLevel] {
+    get
+  }
+}
+public struct Logger {
+  public static let defaultLogLevel: SDK2.LoggerLevel
+  public static var level: SDK2.LoggerLevelThreshold
+  public static var showLevelPrefix: Swift.Bool
+  public static var showGroupPrefix: Swift.Bool
+  public static func set(prefix: Swift.String, forLevel level: SDK2.LoggerLevel)
+  public static func info(_ items: Any..., emoji: SDK2.Logger.Emoji? = nil, tag: Swift.String? = nil)
+  public static func warning(_ items: Any..., emoji: SDK2.Logger.Emoji? = nil, tag: Swift.String? = nil)
+  public static func error(_ items: Any..., emoji: SDK2.Logger.Emoji? = nil, tag: Swift.String? = nil)
+  public static func mute(level: SDK2.LoggerLevel)
+  public static func unmute(level: SDK2.LoggerLevel)
+  public static func unmuteAll()
+  public static func muteAllLevelsBut(level: SDK2.LoggerLevel)
+  public static func isolate(tag: Swift.String)
+  public static func isolate(tags: [Swift.String])
+  public static func filter(tag: Swift.String)
+  public static func filter(tags: [Swift.String])
+  public static func clearTags()
+}
+public typealias HUDCallback = () -> Swift.Void
+@objc @_inheritsConvenienceInitializers open class HUDItem : UIKit.UIView {
+  @objc open var title: Swift.String?
+  @objc open var showCover: Swift.Bool
+  @objc open var coverColor: UIKit.UIColor
+  @objc open var coverAlpha: CoreGraphics.CGFloat
+  @objc open var name: Swift.String?
+  @objc open var titleBackgroundColor: UIKit.UIColor
+  @objc open var closeButton: Swift.Bool
+  @objc open var closeButtonCallback: (() -> Swift.Void)?
+  @discardableResult
+  @objc open func show(animated: Swift.Bool = true, parentView: UIKit.UIView? = nil, callback: SDK2.HUDCallback? = nil) -> SDK2.HUDItem
+  @objc open func hide(animated: Swift.Bool = true, callback: SDK2.HUDCallback?)
+  open func resume()
+  open func resign()
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers open class HUD : UIKit.UIView {
+  @objc public static let shared: SDK2.HUD
+  @objc @IBOutlet public var itemContainer: UIKit.UIView!
+  @objc @IBOutlet public var closeButton: UIKit.UIButton!
+  @objc public var currentItem: SDK2.HUDItem?
+  public var ignoreSameItemNames: Swift.Bool
+  @objc override dynamic open func layoutSubviews()
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @discardableResult
+  open func show(item: SDK2.HUDItem, animated: Swift.Bool = true, parentView: UIKit.UIView? = nil, callback: SDK2.HUDCallback? = nil) -> SDK2.HUDItem
+  @objc open func hide(name: Swift.String? = nil, animated: Swift.Bool = true, callback: SDK2.HUDCallback? = nil)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+}
+public protocol DropStatable {
+  var backgroundColor: UIKit.UIColor? { get }
+  var blurEffect: UIKit.UIBlurEffect? { get }
+  var font: UIKit.UIFont? { get }
+  var textColor: UIKit.UIColor? { get }
+}
+@objc public enum DropStateObjC : Swift.Int {
+  case ObjcInfo
+  case ObjcSuccess
+  case ObjcWarning
+  case ObjcError
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum DropState : SDK2.DropStatable {
+  case `default`, info, success, warning, error, color(UIKit.UIColor), blur(UIKit.UIBlurEffect.Style)
+  public var backgroundColor: UIKit.UIColor? {
+    get
+  }
+  public var font: UIKit.UIFont? {
+    get
+  }
+  public var textColor: UIKit.UIColor? {
+    get
+  }
+  public var blurEffect: UIKit.UIBlurEffect? {
+    get
+  }
+}
+public typealias DropAction = () -> Swift.Void
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class Drop : UIKit.UIView {
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+extension Drop {
+  @objc final public class func downObjc(_ status: Swift.String, state: SDK2.DropStateObjC, duration: Swift.Double = 4.0, action: SDK2.DropAction? = nil)
+  final public class func down(_ status: Swift.String, state: SDK2.DropState = .default, duration: Swift.Double = 4.0, action: SDK2.DropAction? = nil)
+  final public class func down<T>(_ status: Swift.String, state: T, duration: Swift.Double = 4.0, action: SDK2.DropAction? = nil) where T : SDK2.DropStatable
+  final public class func upAll()
+}
+public struct PINAppearence {
+}
+extension UIColor {
+  public static func colorWith(number color: Swift.UInt32) -> UIKit.UIColor
+}
+extension String {
+  public var isEmail: Swift.Bool {
+    get
+  }
+}
+extension NSMutableAttributedString {
+  public func setAsLink(textToFind: Swift.String, linkURL: Swift.String) -> Swift.Bool
+}
+extension String {
+  public func capitalizedFirstLetter() -> Swift.String
+}
+extension UIImage {
+  public class func gifImageWithData(_ data: Foundation.Data) -> UIKit.UIImage?
+  public class func gifImageWithURL(_ gifUrl: Swift.String) -> UIKit.UIImage?
+  public class func gifImageWithName(_ name: Swift.String) -> UIKit.UIImage?
+}
+extension GMSCoordinateBounds {
+  public func center() -> CoreLocation.CLLocationCoordinate2D
+}
+extension CLLocationCoordinate2D {
+  public func transform(using latitudinalMeters: CoreLocation.CLLocationDistance, longitudinalMeters: CoreLocation.CLLocationDistance) -> CoreLocation.CLLocationCoordinate2D
+}
+@objc extension UIColor {
+  @objc public static let snappersBackground: UIKit.UIColor
+  @objc public static let snapersVendor: UIKit.UIColor
+  @objc public static let snappersChatBallonClient: UIKit.UIColor
+  @objc public static let snappersChatBallonManager: UIKit.UIColor
+  @objc public static let snappersChatBallonTextClient: UIKit.UIColor
+  @objc public static let snappersChatBallonTextManager: UIKit.UIColor
+  @objc public static let snappersBroadCastButton: UIKit.UIColor
+  @objc public static let snappersLocateButton: UIKit.UIColor
+  @objc public static let snappersMarkerRadius: UIKit.UIColor
+  @objc public static let snappersMarkerBackgrund: UIKit.UIColor
+  @objc public static let snappersSendButton: UIKit.UIColor
+  @objc public static let snappersEmailAuth: UIKit.UIColor
+  @objc dynamic public class func from(number: Swift.UInt32) -> UIKit.UIColor
+  @objc dynamic public class func from(hexString: Swift.String) throws -> UIKit.UIColor
+  @objc dynamic public var brightness: CoreGraphics.CGFloat {
+    @objc get
+  }
+}
+public enum Model : Swift.String {
+  case simulator, iPod1, iPod2, iPod3, iPod4, iPod5, iPod6, iPod7, iPad2, iPad3, iPad4, iPadAir, iPadAir2, iPadAir3, iPadAir4, iPad5, iPad6, iPad7, iPad8, iPadMini, iPadMini2, iPadMini3, iPadMini4, iPadMini5, iPadPro9_7, iPadPro10_5, iPadPro11, iPadPro2_11, iPadPro12_9, iPadPro2_12_9, iPadPro3_12_9, iPadPro4_12_9, iPhone4, iPhone4S, iPhone5, iPhone5S, iPhone5C, iPhone6, iPhone6Plus, iPhone6S, iPhone6SPlus, iPhoneSE, iPhone7, iPhone7Plus, iPhone8, iPhone8Plus, iPhoneX, iPhoneXS, iPhoneXSMax, iPhoneXR, iPhone11, iPhone11Pro, iPhone11ProMax, iPhoneSE2, iPhone12Mini, iPhone12, iPhone12Pro, iPhone12ProMax, AppleWatch1, AppleWatchS1, AppleWatchS2, AppleWatchS3, AppleWatchS4, AppleWatchS5, AppleWatchSE, AppleWatchS6, AppleTV1, AppleTV2, AppleTV3, AppleTV4, AppleTV_4K, unrecognized
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+}
+public enum AnalyticsEventNames : Swift.String, Swift.CustomStringConvertible {
+  case affiliateScreenReporter
+  case affiliateScreenAlreadySignedIn
+  case broadcastStarted
+  case wowzaError
+  case startingBrodcast
+  case broadcastRegistered
+  case willRefreshEvents
+  case refreshingEvents
+  case speedTestResult
+  case speedTestStart
+  case uploadSpeedTestStarted
+  case uploadSpeedTestCompleted
+  case mainViewControllerPreperationFlags
+  case applicationOpenedWIthURL
+  case didRecieveNotification
+  case mainViewControllerFoundANotification
+  case willSetWowzaConfig
+  case didSetWowzaConfig
+  case broadcastError
+  case amazonUploadFileError
+  case amazonUploadFileSuccess
+  case cameraAccessDenied
+  case micAccessDenied
+  case wowzaStatusChanged
+  case sentAuthLink
+  case speedTestError
+  case applicationDidopenWithURL
+  case applicationHandlesDynmaicLink
+  case loginProcessStarted
+  case loginProcessCompleted
+  case loginProcessError
+  case pingTestResult
+  case signout
+  case registeringNewEvent
+  case bindEventToAffiliate
+  case bindEventToReporter
+  case registerEventToGeoFire
+  case eventProviderError
+  case eventCurruptedWowzaConfig
+  public var description: Swift.String {
+    get
+  }
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum AnalyticsEventLevel : Swift.String {
+  case error, warning, info
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers open class Promise<E, T> : ObjectiveC.NSObject {
+  @discardableResult
+  public func error(_ errorBlock: @escaping ((E?) -> Swift.Void)) -> SDK2.Promise<E, T>
+  @discardableResult
+  public func success(_ sucsessBlock: @escaping ((T?) -> Swift.Void)) -> SDK2.Promise<E, T>
+  @discardableResult
+  public func then(_ thenBlock: @escaping ((E?, T?) -> Swift.Void)) -> SDK2.Promise<E, T>
+  @objc override dynamic public init()
+  @objc deinit
+}
+public struct SnappersError : Swift.Error, Swift.Equatable {
+  public static func == (lhs: SDK2.SnappersError, rhs: SDK2.SnappersError) -> Swift.Bool
+}
+extension SDK2.Logger.Emoji : Swift.Equatable {}
+extension SDK2.Logger.Emoji : Swift.Hashable {}
+extension SDK2.Logger.Emoji : Swift.RawRepresentable {}
+extension SDK2.LoggerLevelThreshold : Swift.Equatable {}
+extension SDK2.LoggerLevelThreshold : Swift.Hashable {}
+extension SDK2.LoggerLevelThreshold : Swift.RawRepresentable {}
+extension SDK2.LoggerLevel : Swift.Equatable {}
+extension SDK2.LoggerLevel : Swift.Hashable {}
+extension SDK2.LoggerLevel : Swift.RawRepresentable {}
+extension SDK2.DropStateObjC : Swift.Equatable {}
+extension SDK2.DropStateObjC : Swift.Hashable {}
+extension SDK2.DropStateObjC : Swift.RawRepresentable {}
+extension SDK2.Model : Swift.Equatable {}
+extension SDK2.Model : Swift.Hashable {}
+extension SDK2.Model : Swift.RawRepresentable {}
+extension SDK2.AnalyticsEventNames : Swift.Equatable {}
+extension SDK2.AnalyticsEventNames : Swift.Hashable {}
+extension SDK2.AnalyticsEventNames : Swift.RawRepresentable {}
+extension SDK2.AnalyticsEventLevel : Swift.Equatable {}
+extension SDK2.AnalyticsEventLevel : Swift.Hashable {}
+extension SDK2.AnalyticsEventLevel : Swift.RawRepresentable {}

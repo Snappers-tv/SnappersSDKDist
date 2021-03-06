@@ -1,0 +1,114 @@
+
+/* Class = "UILabel"; text = "No nearby events at this moment You can start an event by pushing the plus button"; ObjectID = "18g-69-jb6"; */
+
+/* Class = "UIViewController"; title = "Main"; ObjectID = "1A6-Ja-Y4a"; */
+"1A6-Ja-Y4a.title" = "Main";
+
+
+/* Class = "UIViewController"; title = "Login"; ObjectID = "C5V-0O-v3e"; */
+"C5V-0O-v3e.title" = "הרשמה";
+
+/* Class = "UIButton"; normalTitle = "Sign Out"; ObjectID = "H7O-ZF-o3C"; */
+"H7O-ZF-o3C.normalTitle" = "התנתק";
+
+/* Class = "UIViewController"; title = "Broadcast"; ObjectID = "IGF-Kb-r4s"; */
+"IGF-Kb-r4s.title" = "התחל שידור";
+
+/* Class = "UILabel"; text = "Lo Chasub Al ma"; ObjectID = "chw-iG-edg"; */
+"chw-iG-edg.text" = "Lo Chasub Al ma";
+
+/* Class = "UILabel"; text = "UPDATING..."; ObjectID = "dRk-bO-trz"; */
+"dRk-bO-trz.text" = "מעדכן";
+
+/* Class = "UILabel"; text = "Login"; ObjectID = "jvF-Rk-uqw"; */
+"jvF-Rk-uqw.text" = "הרשמה";
+
+/* Class = "UIButton"; normalTitle = "Close"; ObjectID = "kfw-LA-kxX"; */
+"kfw-LA-kxX.normalTitle" = "סגור";
+
+/* Class = "UIButton"; normalTitle = "CHANGE"; ObjectID = "sgn-CW-Uxv"; */
+"sgn-CW-Uxv.normalTitle" = "שנה";
+
+/* Class = "UILabel"; text = "No nearby events at this moment You can start an event by pushing the plus button"; ObjectID = "18g-69-jb6"; */
+"18g-69-jb6.text" = "אין אירועים בקרבת מקום תוכלו ליצור אירוע בעזרת הכפתור + האדום";
+
+/* Class = "UILabel"; text = "צור אירוע חדש"; ObjectID = "8Bq-3n-gQp"; */
+"8Bq-3n-gQp.text" = "צור אירוע חדש";
+
+/* Class = "UIButton"; normalTitle = "Send Authentication Link"; ObjectID = "FVe-Rm-PX3"; */
+"FVe-Rm-PX3.normalTitle" = "שלח קישור לזיהוי";
+
+/* Class = "UIButton"; normalTitle = "Start Broadcasting"; ObjectID = "HbD-UF-H8E"; */
+"HbD-UF-H8E.normalTitle" = "התחל שידור";
+
+/* Class = "UIButton"; normalTitle = "Twitter"; ObjectID = "JCL-Aq-gpN"; */
+"JCL-Aq-gpN.normalTitle" = "טווטיר";
+
+/* Class = "UILabel"; text = "Affiliate Code"; ObjectID = "Kur-iL-Kr2"; */
+"Kur-iL-Kr2.text" = "קוד דומיין";
+
+/* Class = "UIButton"; normalTitle = "Email"; ObjectID = "PBs-DM-KO9"; */
+"PBs-DM-KO9.normalTitle" = "אימייל";
+
+/* Class = "UILabel"; text = "Tij"; ObjectID = "RxX-OX-I0n"; */
+"RxX-OX-I0n.text" = "Tij";
+
+/* Class = "UIButton"; normalTitle = "Continue Without Code"; ObjectID = "WYp-bB-Xor"; */
+"WYp-bB-Xor.normalTitle" = "המשך ללא קוד";
+
+/* Class = "UIButton"; normalTitle = "Guest"; ObjectID = "Wge-wJ-H4j"; */
+"Wge-wJ-H4j.normalTitle" = "אורח";
+
+/* Class = "UIButton"; normalTitle = "צור אירוע"; ObjectID = "XN7-sw-AHF"; */
+"XN7-sw-AHF.normalTitle" = "צור אירוע";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "bZc-K2-qYS"; */
+"bZc-K2-qYS.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Agree"; ObjectID = "bcV-5O-PCA"; */
+"bcV-5O-PCA.normalTitle" = "מסכים";
+
+/* Class = "UILabel"; text = "Lo Chasub Al ma"; ObjectID = "chw-iG-edg"; */
+"chw-iG-edg.text" = "Lo Chasub Al ma";
+
+/* Class = "UILabel"; text = "Tij"; ObjectID = "dTu-ZP-NcQ"; */
+"dTu-ZP-NcQ.text" = "Tij";
+
+/* Class = "UILabel"; text = "Snapperes wants to use your location"; ObjectID = "e1f-bI-IqC"; */
+"e1f-bI-IqC.text" = "סנאפרס מעוניינים להשתמש במיקום שלך";
+
+/* Class = "UISegmentedControl"; e8R-Ny-q6O.segmentTitles[0] = "ציבורי"; ObjectID = "e8R-Ny-q6O"; */
+"e8R-Ny-q6O.segmentTitles[0]" = "ציבורי";
+
+/* Class = "UISegmentedControl"; e8R-Ny-q6O.segmentTitles[1] = "פרטי"; ObjectID = "e8R-Ny-q6O"; */
+"e8R-Ny-q6O.segmentTitles[1]" = "פרטי";
+
+/* Class = "UITextField"; placeholder = "  Email"; ObjectID = "fVv-IM-xPm"; */
+"fVv-IM-xPm.placeholder" = "אימייל";
+
+/* Class = "UILabel"; text = "00:00:00"; ObjectID = "mqa-td-R08"; */
+"mqa-td-R08.text" = "00:00";
+
+/* Class = "UIButton"; normalTitle = "Disagree"; ObjectID = "nc3-7v-BFh"; */
+"nc3-7v-BFh.normalTitle" = "לא מאשר";
+
+/* Class = "UILabel"; text = "Hafgana"; ObjectID = "pcM-YA-Ufd"; */
+"pcM-YA-Ufd.text" = "Hafgana";
+
+/* Class = "UIButton"; normalTitle = "< Back"; ObjectID = "tqH-5B-oDh"; */
+"tqH-5B-oDh.normalTitle" = "< חזור";
+
+/* Class = "UITextField"; placeholder = "כתובת אירוע"; ObjectID = "uHu-37-eb3"; */
+"uHu-37-eb3.placeholder" = "כתובת אירוע";
+
+/* Class = "UIButton"; normalTitle = "Facebook"; ObjectID = "wpV-fu-USi"; */
+"wpV-fu-USi.normalTitle" = "פייסבוק";
+
+/* Class = "UIButton"; normalTitle = "Have an affiliate code"; ObjectID = "ySM-pZ-X4d"; */
+"ySM-pZ-X4d.normalTitle" = "יש לי קוד דומיין";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "zBO-25-46z"; */
+"zBO-25-46z.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "שם אירוע"; ObjectID = "zjm-PN-xpT"; */
+"zjm-PN-xpT.placeholder" = "שם אירוע";

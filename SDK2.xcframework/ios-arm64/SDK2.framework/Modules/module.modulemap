@@ -1,0 +1,11 @@
+framework module SDK2 {
+  umbrella header "SDK2.h"
+
+  export *
+  module * { export * }
+}
+
+module SDK2.Swift {
+    header "SDK2-Swift.h"
+    requires objc
+}

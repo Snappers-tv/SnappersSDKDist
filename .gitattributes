@@ -1,0 +1,2 @@
+SDK2 filter=lfs diff=lfs merge=lfs -text
+SDK2.xcframework filter=lfs diff=lfs merge=lfs -text
