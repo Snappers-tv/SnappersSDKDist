@@ -27,19 +27,16 @@ Pod::Spec.new do |s|
     s.swift_version = "5.3.2"
     s.ios.deployment_target  = '13.0'
   
- s.dependency 'TwitterKit', '~> 1.15.3'
+    s.dependency 'TwitterKit', '~> 1.15.3'
     s.dependency 'GoogleMaps'
-    s.dependency 'GooglePlaces'
     s.dependency 'EVReflection'
     s.dependency 'AWSS3'
     s.dependency 'AWSMobileClient', '~> 2.6.13'
     s.dependency 'UIImageView-Letters'
     s.dependency 'SimplePing'
     s.dependency 'SwiftKeychainWrapper'
-    s.dependency 'SwiftyBeaver'
     s.dependency 'OktaOidc'
     s.dependency 'Google-Maps-iOS-Utils'
-    s.dependency 'Branch'
 
     s.dependency "Kingfisher"
     s.dependency 'JWTDecode', '~> 2.3'
@@ -48,22 +45,16 @@ Pod::Spec.new do |s|
     s.dependency 'Firebase/Auth'
     s.dependency 'Firebase/Database'
     s.dependency 'Firebase/Storage'
-    s.dependency 'Firebase/RemoteConfig'
     s.dependency 'Firebase/Messaging'
     s.dependency 'Firebase/DynamicLinks'
     s.dependency 'Firebase/Firestore'
     s.dependency 'FirebaseInstanceID'
 
     # swift packages
-     s.dependency 'FBSDKCoreKit'
      s.dependency 'FBSDKLoginKit'
-     s.dependency 'Emoji-Logger'
      s.dependency 'HaishinKit', '~> 1.1.1s'
-     s.dependency 'Logboard'
-     s.dependency 'MarqueeLabel'
      s.dependency 'NotificationBannerSwift'
      s.dependency 'Sentry'
-     s.dependency 'SnapKit'
 end
 
 
