@@ -11,8 +11,18 @@ Pod::Spec.new do |s|
                   LICENSE
                 }
     s.author             = { "Eitan Goldfrad" => "eitan.goldfrad@gmail.com" }
-    s.source            = { :git => 'https://github.com/Snappers-tv/SnappersSDKDist.git' } 
+    s.source            = { :http => 'https://snappers-assets.s3.eu-central-1.amazonaws.com/SDK/SDK2.xcframework.zip' } 
 
+
+
+  s.vendored_frameworks  = 'SDK2.xcframework'
+  s.xcconfig            = {
+    'FRAMEWORK_SEARCH_PATHS' => '"${PODS_ROOT}/SnappersSDK"',
+    'LD_RUNPATH_SEARCH_PATHS' => '@loader_path/../Frameworks'
+  }
+  s.requires_arc        = true
+  s.static_framework = true
+  
     s.platform = :ios
     s.swift_version = "5.3.2"
     s.ios.deployment_target  = '13.0'
@@ -55,5 +65,7 @@ Pod::Spec.new do |s|
      s.dependency 'Sentry'
      s.dependency 'SnapKit'
 end
+
+
 
 
