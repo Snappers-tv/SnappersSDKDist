@@ -14,8 +14,6 @@ Pod::Spec.new do |s|
     s.source            = { :http => 'https://snappers-assets.s3.eu-central-1.amazonaws.com/SDK/SDK2.xcframework.zip' } 
 
 
-
-  s.vendored_frameworks  = 'SDK2.xcframework'
   s.xcconfig            = {
     'FRAMEWORK_SEARCH_PATHS' => '"${PODS_ROOT}/SnappersSDK"',
     'LD_RUNPATH_SEARCH_PATHS' => '@loader_path/../Frameworks'
