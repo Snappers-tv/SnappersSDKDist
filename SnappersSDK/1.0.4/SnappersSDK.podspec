@@ -22,8 +22,6 @@ Pod::Spec.new do |s|
     'FRAMEWORK_SEARCH_PATHS' => '"${PODS_ROOT}/SnappersSDK"',
     'LD_RUNPATH_SEARCH_PATHS' => '@loader_path/../Frameworks'
   }
-  s.requires_arc        = true
-  s.static_framework = true
   
     s.platform = :ios
     s.swift_version = "5.3.2"
