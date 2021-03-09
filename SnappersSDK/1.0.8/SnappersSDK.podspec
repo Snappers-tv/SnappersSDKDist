@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
     s.ios.deployment_target  = '13.0'
   
     s.dependency 'TwitterKit', '~> 1.15.3'
-    s.dependency 'GoogleMaps'
+    s.dependency 'GoogleMaps' , '~> 4.1.0'
     s.dependency 'EVReflection'
     s.dependency 'AWSS3'
     s.dependency 'AWSMobileClient', '~> 2.6.13'
