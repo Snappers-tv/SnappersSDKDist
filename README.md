@@ -40,6 +40,8 @@ from the terminal in your project directory type
 Drag the SnappersSDK.xcframework folder from {YOUR_PROJECT_DIR}/Pods/SnappersSDK to your project's "Framework, libraries and Embeded Content" section and set its Embed state to "Embeded & signed"
 ![image](https://user-images.githubusercontent.com/22291628/110253138-6a93f900-7f91-11eb-9a60-ed5a46c85b93.png)
 
+
+
 ## Step 3: Obtain your Snappers Affiliate code and Secret.
 Snappers identifies developers by their app's bundle id.  
 To recieve the uniqe affiliate code and secret tokens send us your prject's bundle id to info@snappers.tv
@@ -95,6 +97,8 @@ Paste the following snippet into your existing plist. just before the closing ta
 </dict>
 </plist>
 ```
+
+
 
 ## Step 6: Facebook and Twitter authentication 
 In order to use Snappers' Facebook and Twitter authentication, We'll require some additional keys in the info.plist file
