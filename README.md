@@ -162,7 +162,7 @@ import Snappers
 .
 .
 .
-override func viewDidLoad() {
-    SnappersSDK.present()
+override func viewDidAppear(_ animated: Bool) {
+    SnappersSDK.present(from: self, animated: false)
 }
 ```
