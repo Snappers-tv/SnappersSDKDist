@@ -14,7 +14,7 @@ Add this to your Podfile
     .
     .
  
-    pod 'SnappersSDK', '1.0.6'
+    pod 'SnappersSDK', '1.0.8'
     
     .
     .
