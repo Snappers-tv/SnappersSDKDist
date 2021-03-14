@@ -51,7 +51,10 @@ To recieve the uniqe affiliate code and secret tokens send us your prject's bund
 2. In the target’s Capabilities tab, enable **Push Notifications**, **Keychain Sharing** and **Background Modes**.  
 3. In the target’s Capabilities tab, under **Background Modes**, enable **Location updates** and **Remote notifications**.
 
-## Step 5: Add required keys to your info.plist file
+## Step 5: Notifications
+In order for Snappers to be able to send push notifications we need you to send us either the .p8 push notification key file with its password, or a .p12 file created from push notification certificate along with its password.
+
+## Step 6: Add required keys to your info.plist file
 
 Snappers requires the following keys to be addded to the info.plist file.  
 **Cordova developers might see this file as {PROJECT-NAME}-info.plist**
@@ -100,7 +103,7 @@ Paste the following snippet into your existing plist. just before the closing ta
 
 
 
-## Step 6: Facebook and Twitter authentication 
+## Step 7: Facebook and Twitter authentication 
 In order to use Snappers' Facebook and Twitter authentication, We'll require some additional keys in the info.plist file
 
 - URL types
@@ -136,7 +139,7 @@ Paste the following snippet into your existing plist.
     </array>
 ```
 
-## Step 7: Configure Snappers from your AppDelegate
+## Step 8: Configure Snappers from your AppDelegate
 Replace AFFILIATE_CODE and SECRET with the onece provided by Snappers
 ```swift 
 import Snappers
@@ -158,7 +161,7 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
 }
 
 ```
-## Step 8: Present Snappers 
+## Step 9: Present Snappers 
 
 **​ViewController.swift**
 ```swift
