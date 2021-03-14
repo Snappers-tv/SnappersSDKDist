@@ -3,7 +3,7 @@
 ## Step 1: Instalation
 
 ### CocoPods
-Add this to your Podfile 
+Add this to your Podfile
 
 ```ruby
     source 'https://github.com/CocoaPods/Specs'
@@ -13,9 +13,9 @@ Add this to your Podfile
     .
     .
     .
- 
+
     pod 'SnappersSDK'
-    
+
     .
     .
     .
@@ -31,7 +31,7 @@ end
    end
 
 ```
-from the terminal in your project directory type 
+from the terminal in your project directory type
 ```bash
     pod install
 ```
@@ -39,6 +39,9 @@ from the terminal in your project directory type
 ## Step 2: Add SnappersSDK to you project
 Drag the SnappersSDK.xcframework folder from {YOUR_PROJECT_DIR}/Pods/SnappersSDK to your project's "Framework, libraries and Embeded Content" section and set its Embed state to "Embeded & signed"
 ![image](https://user-images.githubusercontent.com/22291628/110253138-6a93f900-7f91-11eb-9a60-ed5a46c85b93.png)
+
+.
+.
 
 ## Step 3: Obtain your Snappers Affiliate code and Secret.
 Snappers identifies developers by their app's bundle id.  
@@ -65,7 +68,7 @@ Snappers requires the following keys to be addded to the info.plist file.
 - Privacy - Photo Library Usage Description : Add description
 - App Transport Security Settings
 	* Allow Arbitrary Loads : YES
-	
+
 Either add them manually one by one, or use the following instructions to add them collectively:
 
 In the Project Navigator, right click on Info.plist, and choose "Open as" → "Source Code"
@@ -101,7 +104,7 @@ Paste the following snippet into your existing plist. just before the closing ta
 
 
 
-## Step 7: Facebook and Twitter authentication 
+## Step 7: Facebook and Twitter authentication
 In order to use Snappers' Facebook and Twitter authentication, We'll require some additional keys in the info.plist file
 
 - URL types
@@ -139,7 +142,7 @@ Paste the following snippet into your existing plist.
 
 ## Step 8: Configure Snappers from your AppDelegate
 Replace AFFILIATE_CODE and SECRET with the onece provided by Snappers
-```swift 
+```swift
 import Snappers
 .
 .
@@ -147,19 +150,19 @@ import Snappers
 func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
 
     let snappersConfig = SnappersConfiguration(affiliateCode: "AFFILIATE_CODE", affiliateSecret: "SECRET")
-    
+
     SnappersSDK.configure(configuration: snappersConfig, application: application, launchOptions: launchOptions) { error in
         guard error == nil else {
            print("Error configuring snappers", error!)
            return
        }
-            
+
        print("Snappers configured succsefully")
     }
 }
 
 ```
-## Step 9: Present Snappers 
+## Step 9: Present Snappers
 
 **​ViewController.swift**
 ```swift
