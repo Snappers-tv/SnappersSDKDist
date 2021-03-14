@@ -50,7 +50,7 @@ To recieve the uniqe affiliate code and secret tokens send us your prject's bund
 3. In the target’s Capabilities tab, under **Background Modes**, enable **Location updates** and **Remote notifications**.
 
 ## Step 5: Notifications
-In order for Snappers to be able to send push notifications we need you to provide us either a .p8 push notification key file and its password, or a .p12 file created from push notification certificate along with its password.
+In order for your app to receivbe push notifications from Snappers we need you to provide us with either a .p8 push notification key file and its password, or a .p12 file created from push notification certificate along with its password.
 
 ## Step 6: Add required keys to your info.plist file
 
