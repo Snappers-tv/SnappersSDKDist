@@ -40,8 +40,6 @@ from the terminal in your project directory type
 Drag the SnappersSDK.xcframework folder from {YOUR_PROJECT_DIR}/Pods/SnappersSDK to your project's "Framework, libraries and Embeded Content" section and set its Embed state to "Embeded & signed"
 ![image](https://user-images.githubusercontent.com/22291628/110253138-6a93f900-7f91-11eb-9a60-ed5a46c85b93.png)
 
-
-
 ## Step 3: Obtain your Snappers Affiliate code and Secret.
 Snappers identifies developers by their app's bundle id.  
 To recieve the uniqe affiliate code and secret tokens send us your prject's bundle id to info@snappers.tv
@@ -52,7 +50,7 @@ To recieve the uniqe affiliate code and secret tokens send us your prject's bund
 3. In the target’s Capabilities tab, under **Background Modes**, enable **Location updates** and **Remote notifications**.
 
 ## Step 5: Notifications
-In order for Snappers to be able to send push notifications we need you to send us either the .p8 push notification key file with its password, or a .p12 file created from push notification certificate along with its password.
+In order for Snappers to be able to send push notifications we need you to provide us either a .p8 push notification key file and its password, or a .p12 file created from push notification certificate along with its password.
 
 ## Step 6: Add required keys to your info.plist file
 
