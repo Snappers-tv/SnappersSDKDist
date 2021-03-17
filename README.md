@@ -156,11 +156,17 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
            print("Error configuring snappers", error!)
            return
        }
-
        print("Snappers configured succsefully")
     }
+    
+    UNUserNotificationCenter.current().delegate = self
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        SnappersSDK.userNotificationCenter(center, willPresent: notification, withCompletionHandler: completionHandler)
+    }
+}
 ```
 ## Step 9: Present Snappers
 
