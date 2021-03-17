@@ -146,7 +146,8 @@ Replace AFFILIATE_CODE and SECRET with the onece provided by Snappers
 import Snappers
 .
 .
-.
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
 func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
 
     let snappersConfig = SnappersConfiguration(affiliateCode: "AFFILIATE_CODE", affiliateSecret: "SECRET")
@@ -160,6 +161,7 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
     }
     
     UNUserNotificationCenter.current().delegate = self
+}
 }
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
