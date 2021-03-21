@@ -52,7 +52,7 @@ Pod::Spec.new do |s|
 
     # swift packages
      s.dependency 'FBSDKLoginKit'
-     s.dependency 'HaishinKit', '~> 1.1.2s'
+     s.dependency 'HaishinKit', '~> 10.1.4'
      s.dependency 'NotificationBannerSwift'
      s.dependency 'Sentry'
 end
