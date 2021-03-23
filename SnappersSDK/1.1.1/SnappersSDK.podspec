@@ -27,11 +27,11 @@ Pod::Spec.new do |s|
     s.swift_version = "5.3.2"
     s.ios.deployment_target  = '13.0'
   
-    s.dependency 'TwitterKit', '~> 1.15.3'
+    s.dependency 'TwitterKit'
     s.dependency 'GoogleMaps' , '~> 4.1.0'
     s.dependency 'EVReflection'
     s.dependency 'AWSS3'
-    s.dependency 'AWSMobileClient', '~> 2.6.13'
+    s.dependency 'AWSMobileClient'
     s.dependency 'UIImageView-Letters'
     s.dependency 'SimplePing'
     s.dependency 'SwiftKeychainWrapper'
