@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
     s.dependency 'GoogleMaps' , '~> 4.1.0'
     s.dependency 'EVReflection'
     s.dependency 'AWSS3'
-    s.dependency 'AWSMobileClient'
+#    s.dependency 'AWSMobileClient'
     s.dependency 'UIImageView-Letters'
     s.dependency 'SimplePing'
     s.dependency 'SwiftKeychainWrapper'
@@ -49,7 +49,7 @@ Pod::Spec.new do |s|
     s.dependency 'FirebaseInstanceID', '<= 7.11.0'
 
     # swift packages
-     s.dependency 'FBSDKLoginKit', '<= 9.0.0'
+     s.dependency 'FBSDKLoginKit'
      s.dependency 'HaishinKit', '~> 10.1.5'
      s.dependency 'NotificationBannerSwift'
      s.dependency 'Sentry'
