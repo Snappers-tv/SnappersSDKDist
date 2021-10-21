@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
     s.swift_version = "5.3.2"
     s.ios.deployment_target  = '13.0'
 
-    s.dependency 'TwitterKit'
+    s.dependency 'TwitterKit5'
     s.dependency 'GoogleMaps' , '~> 4.1.0'
     s.dependency 'EVReflection'
     s.dependency 'AWSS3'
