@@ -53,5 +53,5 @@ Pod::Spec.new do |s|
      s.dependency 'HaishinKit', '~> 10.1.5'
      s.dependency 'NotificationBannerSwift'
      s.dependency 'Sentry'
-     s.dependency 'RealmSwift'
+     s.dependency 'RealmSwift', '~> 10.20.0'
 end
