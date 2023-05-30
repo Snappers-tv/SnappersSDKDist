@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
 
     s.platform = :ios
     s.swift_version = "5.3.2"
-    s.ios.deployment_target  = '13.0'
+    s.ios.deployment_target  = '14.0'
 
     s.dependency 'GoogleMaps' , '~> 4.1.0'
     s.dependency 'EVReflection'
@@ -53,5 +53,5 @@ Pod::Spec.new do |s|
      s.dependency 'HaishinKit', '~> 10.1.5'
      s.dependency 'NotificationBannerSwift'
      s.dependency 'Sentry'
-     s.dependency 'RealmSwift'
+     s.dependency 'RealmSwift', '~> 10.20.0'
 end
