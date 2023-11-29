@@ -13,7 +13,8 @@ Pod::Spec.new do |s|
 
 
    s.preserve_paths = [
-    'ios-arm64'
+    'ios-arm64',
+    'ios-x86_64-simulator'
   ]
 
   s.xcconfig            = {
