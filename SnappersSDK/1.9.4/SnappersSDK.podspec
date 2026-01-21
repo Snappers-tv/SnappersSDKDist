@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
     s.swift_version    = '5.10'
     
     # This matches the root of the zip file
-    s.vendored_frameworks = 'SnappersSDK.xcframework'
+    s.vendored_frameworks = 'SnappersSDK.xcframework', 'Frameworks/SnappersSDK.xcframework'
 
     # Dependencies
     s.dependency 'GoogleMaps', '~> 7.1.0'
