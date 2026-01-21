@@ -7,14 +7,14 @@ Pod::Spec.new do |s|
     s.license          = { :type => 'Copyright', :text => 'Copyright 2021 Snappers.tv LLC' }
     s.author           = { "Eitan Goldfrad" => "eitan.goldfrad@gmail.com" }
     
-    # Note the change to .zip extension
+    # Updated to .zip extension
     s.source           = { :http => "https://snappers-assets.s3.eu-central-1.amazonaws.com/SDK/IOS/#{s.version}/SnappersSDK.xcframework.zip" }
 
     s.platform         = :ios, '16.0'
     s.swift_version    = '5.10'
     
-    # This pattern matches the folder inside the zip
-    s.vendored_frameworks = 'SnappersSDKDir/SnappersSDK.xcframework'
+    # This matches the root of the zip file
+    s.vendored_frameworks = 'SnappersSDK.xcframework'
 
     # Dependencies
     s.dependency 'GoogleMaps', '~> 7.1.0'
