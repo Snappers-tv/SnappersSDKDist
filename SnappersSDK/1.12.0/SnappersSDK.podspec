@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
     s.vendored_frameworks = 'Snappers.xcframework'
 
     # Dependencies
-    s.dependency 'GoogleMaps', '~> 7.1.0'
+    s.dependency 'GoogleMaps', '~> 9.2.0'
     s.dependency 'EVReflection'
     s.dependency 'AWSS3'
     s.dependency 'UIImageView-Letters'
