@@ -27,14 +27,13 @@ Pod::Spec.new do |s|
     s.dependency 'Google-Maps-iOS-Utils'
     s.dependency 'JWTDecode', '~> 2.3'
 
-    # Pin exact Firebase versions to avoid Swift ABI mismatches
-    s.dependency 'FirebaseAuth', '12.9.0'
-    s.dependency 'FirebaseDatabase', '12.9.0'
-    s.dependency 'FirebaseStorage', '12.9.0'
-    s.dependency 'FirebaseMessaging', '12.9.0'
-    s.dependency 'FirebaseFunctions', '12.9.0'
-    s.dependency 'FirebaseFirestore', '12.9.0'
-    s.dependency 'FirebaseCrashlytics', '12.9.0'
+    s.dependency 'FirebaseAuth', '~> 12.0'
+    s.dependency 'FirebaseDatabase', '~> 12.0'
+    s.dependency 'FirebaseStorage', '~> 12.0'
+    s.dependency 'FirebaseMessaging', '~> 12.0'
+    s.dependency 'FirebaseFunctions', '~> 12.0'
+    s.dependency 'FirebaseFirestore', '~> 12.0'
+    s.dependency 'FirebaseCrashlytics', '~> 12.0'
 
     s.dependency 'FBSDKCoreKit/Swift'
     s.dependency 'FBSDKLoginKit/Swift'
