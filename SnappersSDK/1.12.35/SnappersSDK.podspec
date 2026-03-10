@@ -17,9 +17,10 @@ Pod::Spec.new do |s|
     s.vendored_frameworks = 'Snappers.xcframework'
 
     # Dependencies - Libraries that the SDK requires at compile time
-    # GoogleMaps and Google-Maps-iOS-Utils are embedded in xcframework - do NOT declare as dependencies
+    s.dependency 'GoogleMaps', '~> 7.4.0'
     s.dependency 'UIImageView-Letters'
     s.dependency 'OktaOidc'
+    s.dependency 'Google-Maps-iOS-Utils'
     s.dependency 'JWTDecode', '~> 2.3'
 
     # Vendored libraries embedded in xcframework:
